@@ -2,6 +2,18 @@
 
 Proyek ini membandingkan enam representasi teks untuk mengklasifikasikan tweet menjadi `negative`, `neutral`, atau `positive`. Eksperimen memakai split train/test stratified 80:20 dengan `random_state=42`, lalu mengukur Accuracy dan Macro F1.
 
+## Pembagian tugas debat
+
+Gunakan tabel ini sebagai panduan belajar dan persiapan presentasi. Angka rinci dapat dilihat di `results/benchmark_summary.csv`; setiap anggota sebaiknya memahami alasan di balik hasil bagiannya, bukan hanya menghafal angka.
+
+| Orang | Tugas utama | Yang harus dikuasai | Bukti yang disiapkan |
+|---|---|---|---|
+| **Kamu — koordinator dan pembuka** | Menjelaskan tujuan, dataset, pembagian data, lalu menyambungkan bagian teman-teman | Target kita adalah `airline_sentiment` dengan tiga kelas: negative, neutral, positive. Setelah 213 teks duplikat dibuang, data dibagi menjadi 11.541 train dan 2.886 test. | Satu diagram alur eksperimen dan ringkasan hasil |
+| **Anggota 2 — TF-IDF dan preprocessing** | Menjelaskan metode terbaik dan alasan preprocessing dipertahankan | TF-IDF + LinearSVC + `minimal_clean` mendapat Macro F1 **0,7495**. Hasil rata-rata `minimal_clean` juga lebih baik daripada `full_norm`: **0,6502 vs 0,6195**. | Tabel ringkas BoW vs TF-IDF, contoh teks sebelum/sesudah preprocessing |
+| **Anggota 3 — embedding** | Menjelaskan Word2Vec, GloVe, fastText, pooling, dan OOV | Skip-gram mendapat Macro F1 **0,6888**, lebih tinggi dari CBOW **0,6588**. fastText mencatat OOV **0,00%** pada test menurut definisi metrik di kode proyek. | Diagram sederhana cara kerja embedding dan tabel perbandingan |
+| **Anggota 4 — pembanding dan penanya** | Memetakan perbedaan tugas lawan dan menyiapkan pertanyaan yang adil | Kita memprediksi **sentimen**; lawan memprediksi **kategori/alasan keluhan**. Dataset sama, tetapi targetnya berbeda. | Tabel “tugas kita vs tugas lawan” dan 3 pertanyaan untuk sesi sanggahan |
+| **Anggota 5 — audit kesalahan dan penutup** | Menunjukkan contoh prediksi yang keliru, menjelaskan keterbatasan, lalu menutup presentasi | Model belum sempurna; satu skor tidak menjelaskan semua jenis kesalahan. Siapkan contoh kesalahan dari data test, jangan mengarang contoh. | Confusion matrix, 5–10 contoh salah prediksi yang sudah diperiksa, kesimpulan 30–45 detik |
+
 ## Persiapan
 
 - Python 3.12
