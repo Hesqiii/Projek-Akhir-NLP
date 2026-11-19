@@ -1,0 +1,35 @@
+# Python caches and build artifacts
+__pycache__/
+*.py[cod]
+*.egg-info/
+build/
+dist/
+wheels/
+
+# Local Python environments
+.venv/
+venv/
+env/
+.uv-cache/
+
+# Downloaded datasets stay local; share dataset instructions, not raw copies
+data/raw/
+data/raw/meld/
+# Downloaded pretrained models and generated vector indexes
+models/glove/
+*.kv
+*.kv.vectors.npy
+
+# Downloaded NLTK corpora/tokenizers
+nltk_data/
+
+# Local secrets and editor/OS files
+.env
+.env.*
+!.env.example
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+
+# Keep reviewed benchmark outputs and debate materials under results/ trackable.
