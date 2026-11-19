@@ -8,7 +8,7 @@ Proyek ini membandingkan enam representasi teks untuk mengklasifikasikan tweet m
 - [uv](https://docs.astral.sh/uv/)
 - Dataset lokal `data/raw/Tweets.csv` dengan kolom `text`, `airline_sentiment`, `negativereason`, `airline`, dan `tweet_id`
 
-Dataset Twitter US Airline Sentiment berasal dari CrowdFlower. Salah satu salinan publik 14.640 baris tersedia di [Hugging Face](https://huggingface.co/datasets/osanseviero/twitter-airline-sentiment). Dataset dan model GloVe tidak disimpan di repository; `.gitignore` menjaga salinan lokal tetap di komputer pengguna.
+Dataset Twitter US Airline Sentiment berasal dari CrowdFlower. Salah satu salinan publik 14.640 baris tersedia di [Kaggle](https://www.kaggle.com/datasets/crowdflower/twitter-airline-sentiment). Dataset dan model GloVe tidak disimpan di repository; `.gitignore` menjaga salinan lokal tetap di komputer pengguna.
 
 Siapkan environment dari root proyek:
 
